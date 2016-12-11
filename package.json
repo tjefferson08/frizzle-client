@@ -1,0 +1,18 @@
+{
+  "name": "frizzle-client",
+  "version": "0.0.1",
+  "description": "Web client for the frizzle CapMetro backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "metro",
+    "capmetro",
+    "austin",
+    "transit",
+    "bus"
+  ],
+  "author": "Travis Jefferson",
+  "license": "MIT"
+}
