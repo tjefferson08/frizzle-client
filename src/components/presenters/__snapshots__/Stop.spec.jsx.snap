@@ -1,0 +1,18 @@
+exports[`test should render a li 1`] = `
+<li>
+  <h3>
+    Stop 1
+  </h3>
+  <div>
+    <em>
+      Id: 
+      123
+    </em>
+  </div>
+  <div>
+    Distance: 
+    1001.1234
+     meters
+  </div>
+</li>
+`;
