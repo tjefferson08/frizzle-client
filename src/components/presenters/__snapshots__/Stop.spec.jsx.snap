@@ -10,6 +10,10 @@ exports[`test should render a li 1`] = `
     </em>
   </div>
   <div>
+    Servicing routes: 
+    10, 20, 30
+  </div>
+  <div>
     Distance: 
     1001.1234
      meters
