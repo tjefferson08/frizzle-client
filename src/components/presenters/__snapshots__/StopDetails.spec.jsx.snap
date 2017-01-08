@@ -1,0 +1,10 @@
+exports[`test should render a UL of stops 1`] = `
+<div>
+  <h3>
+    123
+  </h3>
+  <div>
+    I\'m a details card.
+  </div>
+</div>
+`;
