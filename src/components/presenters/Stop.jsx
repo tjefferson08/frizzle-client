@@ -11,7 +11,7 @@ const Stop = ({ stop_name, stop_id, stop_distance, route_names }) => {
         Servicing routes: {(route_names || []).join(', ')}
       </div>
       <div>
-        Distance: {stop_distance} meters
+        Distance: {stop_distance.toFixed(2)} meters
       </div>
     </li>
   );
