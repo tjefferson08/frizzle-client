@@ -48,9 +48,28 @@ export const fetchNearbyStops = () => {
           `http://localhost:4000/api/stops/near-me?lat=${coordinates.latitude}1&lon=${coordinates.longitude}`
         ).then(
           resp => resp.json()
-        ).then((json) => {
-          dispatch(fetchNearbyStopsSuccess(json.data));
-        });
+        ).then(
+          (nearbyStopsResponse) => {
+            return window.fetch(
+              `http://localhost:4000/api/stops/with-routes?stop-ids=${nearbyStopsResponse.data.map(stop => stop.stop_id).join(',')}`
+            ).then(
+              resp => resp.json()
+            ).then(
+              stopsWithRoutesResponse => {
+                return nearbyStopsResponse.data.map(
+                  nearbyStop => {
+                    nearbyStop.route_names = stopsWithRoutesResponse.data[nearbyStop.stop_id];
+                    return nearbyStop;
+                  }
+                );
+              }
+            );
+          }
+        ).then(
+          (nearbyStopsWithRoutes) => {
+            return dispatch(fetchNearbyStopsSuccess(nearbyStopsWithRoutes));
+          }
+        );
       }
     ).catch(
       (err) => {
