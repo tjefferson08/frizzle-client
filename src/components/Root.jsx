@@ -1,11 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import StopsNearMeButton from './containers/StopsNearMeButton';
-import VisibleStopList from './containers/VisibleStopList';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import thunkMiddleware from 'redux-thunk';
 import { combineReducers, createStore, applyMiddleware } from 'redux';
+import { Router, Route, browserHistory } from 'react-router';
+
+import NearbyStops from './presenters/NearbyStops';
+import StopDetails from './presenters/StopDetails';
 import stops from '../reducers/stops';
 
 let store = createStore(
@@ -13,21 +15,19 @@ let store = createStore(
   applyMiddleware(thunkMiddleware)
 );
 
-class App extends React.Component {
-  render() {
-    return (
-      <div>
-        <StopsNearMeButton text="Stops near me" />
-        <VisibleStopList />
-      </div>
-    );
-  }
+const Root = () => {
+  return (
+    <Provider store={store}>
+      <Router history={browserHistory}>
+        <Route path="/" component={NearbyStops} />
+        <Route path="/stops" component={StopDetails} />
+      </Router>
+    </Provider>
+  );
 };
 
 render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
+  <Root />,
   document.getElementById('app')
 );
 
