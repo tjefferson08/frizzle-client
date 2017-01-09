@@ -1,9 +1,9 @@
 import React from 'react';
 
-const StopDetails = ({ stop_id }) => {
+const StopDetails = ({ params }) => {
   return (
     <div>
-      <h3>{stop_id}</h3>
+      <h3>{params.stop_id}</h3>
       <div>
         I'm a details card.
       </div>

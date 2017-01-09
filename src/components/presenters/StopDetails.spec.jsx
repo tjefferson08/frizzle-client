@@ -4,8 +4,7 @@ import StopDetails from './StopDetails';
 
 test('should render a UL of stops', () => {
   const renderer = ReactTestUtils.createRenderer();
-  const fakeStops = [{ stop_name: 'Stop 1' }, { stop_name: 'Stop 2' }];
-  renderer.render(<StopDetails stop_id="123" />);
+  renderer.render(<StopDetails params={ { stop_id: "123" } } />);
   const result = renderer.getRenderOutput();
 
   expect(result.type).toBe('div');

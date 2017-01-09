@@ -20,7 +20,7 @@ const Root = () => {
     <Provider store={store}>
       <Router history={browserHistory}>
         <Route path="/" component={NearbyStops} />
-        <Route path="/stops" component={StopDetails} />
+        <Route path="/stops/(:stop_id)" component={StopDetails} />
       </Router>
     </Provider>
   );
