@@ -9,9 +9,10 @@ import { Router, Route, browserHistory } from 'react-router';
 import NearbyStops from './presenters/NearbyStops';
 import StopDetails from './presenters/StopDetails';
 import stops from '../reducers/stops';
+import showMap from '../reducers/showMap';
 
 let store = createStore(
-  combineReducers({ stops }),
+  combineReducers({ showMap, stops }),
   applyMiddleware(thunkMiddleware)
 );
 
