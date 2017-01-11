@@ -5,8 +5,8 @@ module.exports = {
     path.resolve(__dirname, 'src', 'components', 'Root')
   ],
   output: {
+    publicPath: "/assets/",
     filename: 'bundle.js',
-    publicPath: 'dist',
     path: './dist'
   },
   debug: true,

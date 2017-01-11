@@ -1,0 +1,14 @@
+exports[`test should render a li 1`] = `
+<div>
+  <span>
+    Stops near:
+  </span>
+  <Connect(Button)
+    text="My current location" />
+  <Connect(Button)
+    text="Toggle map" />
+  <Connect(MapContainer)
+    showMap={true} />
+  <Connect(StopList) />
+</div>
+`;
