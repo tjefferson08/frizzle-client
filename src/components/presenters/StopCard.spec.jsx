@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactTestUtils from 'react-addons-test-utils';
-import Stop from './Stop';
+import StopCard from './StopCard';
 
 test('should render a li', () => {
   const renderer = ReactTestUtils.createRenderer();
@@ -11,7 +11,7 @@ test('should render a li', () => {
     route_names: [ 10, 20, 30 ]
   };
 
-  renderer.render(<Stop {...fakeStop} />)
+  renderer.render(<StopCard {...fakeStop} />)
   const result = renderer.getRenderOutput();
 
   expect(result.type).toBe('li');

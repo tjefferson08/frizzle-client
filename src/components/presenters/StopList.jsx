@@ -1,10 +1,10 @@
 import React from 'react';
-import Stop from './Stop';
+import StopCard from './StopCard';
 
 const StopList = ({ stops }) => {
   return (
     <ul>
-      {stops.map((stop, i) => <Stop key={i} {...stop} />)}
+      {stops.map((stop, i) => <StopCard key={i} {...stop} />)}
     </ul>
   );
 };

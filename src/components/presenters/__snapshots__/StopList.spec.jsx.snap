@@ -1,8 +1,8 @@
 exports[`test should render a UL of stops 1`] = `
 <ul>
-  <Stop
+  <StopCard
     stop_name="Stop 1" />
-  <Stop
+  <StopCard
     stop_name="Stop 2" />
 </ul>
 `;
