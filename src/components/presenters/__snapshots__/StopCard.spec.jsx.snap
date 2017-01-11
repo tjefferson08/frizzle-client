@@ -4,10 +4,15 @@ exports[`test should render a li 1`] = `
     Stop 1
   </h3>
   <div>
-    <em>
-      Id: 
-      123
-    </em>
+    <Link
+      onlyActiveOnIndex={false}
+      style={Object {}}
+      to="/stops/123">
+      <em>
+        Id: 
+        123
+      </em>
+    </Link>
   </div>
   <div>
     Servicing routes: 
