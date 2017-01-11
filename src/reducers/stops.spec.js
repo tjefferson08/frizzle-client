@@ -1,5 +1,5 @@
-import ACTION_TYPES from '../actions.js';
-import stops from './stops.js';
+import ACTION_TYPES from '../actions';
+import stops from './stops';
 
 test('default state should be empty array', () => {
   expect(
